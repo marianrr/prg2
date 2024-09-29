@@ -12,3 +12,5 @@ let third = obj1.color
 
 const one = document.getElementsByTagName("p")[0]
  one.textContent = first + third + second
+
+ let html = document.querySelector('.elem') ? document.querySelector('.elem')?.innerHTML : null;
