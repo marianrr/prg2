@@ -1,6 +1,6 @@
 const Factory = (name) => {
     return {
-        name: name,
+        name,
         coco: function() {
             return 'dj guga la felipa...'
         }
