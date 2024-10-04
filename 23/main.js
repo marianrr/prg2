@@ -1,16 +1,6 @@
-class Game {
-    
-
-    rise() {
-        console.log("miau iau dau hau hau")
-    }
-
-    callFunction() {
-        this.rise()
-        return "dj guga la felipa"
-    }
+"use strict"
+function miau() {
+    console.log(this)
 }
 
-
-const fifa = new Game()
-fifa.callFunction()
+miau()
