@@ -51,16 +51,26 @@ afis() {
     return str
 }
 
-//removeHead() {
-//     let current = this.head
-//     while(current.next) {
-//         current = current.next
-//     }
-
-// this.head = null
+removeHead() {
+    this.head = this.head.next
 
 
-// }
+}
+
+
+removeTail() {
+    let current = this.head;
+        while (current.next !== this.tail) {
+            current = current.next;
+        }
+
+        const removedNode = this.tail;
+        this.tail = current;  // Penultimul nod devine coada
+        this.tail.next = null;  // Coada nouă nu mai are next
+
+
+
+}
 
 
 
@@ -74,7 +84,7 @@ list1.addToHead(567)
 console.log("Lista este: ", list1.afis())
 console.log("The tail is: ", list1.tail.data)
 console.log("The head is: ", list1.head.data)
-//list1.removeHead()
+list1.removeHead()
 console.log("Lista este: ", list1.afis())
 console.log("The tail is: ", list1.tail.data)
 console.log("The head is: ", list1.head.data)
@@ -94,4 +104,17 @@ list2.addToTail(7)
 
 console.log("Lista este: ", list2.afis())
 console.log("The tail is: ", list2.tail.data)
-console.log("The head is: ", list2.head.data)
+//console.log("The head is: ", list2.head.data)
+
+// list2.removeHead()
+// list2.removeHead()
+// list2.removeHead()
+
+list2.removeTail()
+list2.removeTail()
+list2.removeTail()
+
+console.log("dupa remove...")
+console.log("Lista este: ", list2.afis())
+console.log("The tail is: ", list2.tail.data)
+//console.log("The head is: ", list2.head.data)
